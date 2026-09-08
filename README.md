@@ -1,6 +1,7 @@
 # ux-state-review
 
-UI の「状態」に関する 8 つの UX 規則をチェックし、対象アプリの文脈に合わせて適用するための Claude Code スキルです。
+UI の「状態」に関する 8 つの UX 規則をチェックし、対象アプリの文脈に合わせて適用するためのエージェントスキルです。
+Claude Code と Codex のどちらでも使えます。
 
 利用者が画面の前で立ち止まる場面（待つ、何もない、失敗した、権限がない、消す、終わった）で、次に何が起きるか、何をすればよいかを画面が伝えているかを点検し、足りなければ補います。
 
@@ -35,27 +36,33 @@ UI の「状態」に関する 8 つの UX 規則をチェックし、対象ア�
 
 ## インストール
 
-Claude Code のスキルディレクトリに `skills/ux-state-review` を置きます。
+使うエージェントのスキルディレクトリに `skills/ux-state-review` を置きます。
+スキルの形式（`SKILL.md` と参照ファイル）は Claude Code と Codex で共通です。
+
+```bash
+git clone https://github.com/ktysne/ux-state-review.git
+```
 
 ユーザー共通で使う場合：
 
 ```bash
-git clone https://github.com/ktysne/ux-state-review.git
+# Claude Code
 cp -r ux-state-review/skills/ux-state-review ~/.claude/skills/
 ```
 
-特定のプロジェクトだけで使う場合は、そのリポジトリの `.claude/skills/` にコピーします。
-
 ```bash
-cp -r ux-state-review/skills/ux-state-review <project>/.claude/skills/
+# Codex
+cp -r ux-state-review/skills/ux-state-review ~/.codex/skills/
 ```
+
+特定のプロジェクトだけで使う場合は、そのリポジトリの `.claude/skills/`（Claude Code）または `.codex/skills/`（Codex）にコピーします。
 
 クローンしたリポジトリをそのまま参照したい場合は、コピーの代わりにシンボリックリンクを張っても動作します。
 
 ## 使い方
 
 スキルは、読み込み中、空表示、検索 0 件、送信失敗、権限不足、保存状態、削除確認、完了画面といった状態の設計を含む作業で自動的に使われます。
-明示的に呼び出す場合は `/ux-state-review` と入力します。
+明示的に使わせる場合は、Claude Code では `/ux-state-review` と入力し、Codex ではスキル名 `ux-state-review` を指示に含めます。
 
 例：
 
