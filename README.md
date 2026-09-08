@@ -73,7 +73,3 @@ skills/ux-state-review/
 ├── references/rules.md   規則ごとの詳細
 └── evals/evals.json      動作確認用のテストプロンプト
 ```
-
-## ライセンス
-
-[MIT License](LICENSE)
