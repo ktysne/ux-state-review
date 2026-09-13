@@ -17,3 +17,6 @@ Thumbs.db
 
 # Node (クロスレビュー用の npm scripts。依存は無いが念のため)
 node_modules/
+
+# 参考資料の置き場 (スキルには取り込まない)
+sample/
