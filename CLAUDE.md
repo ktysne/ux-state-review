@@ -20,3 +20,10 @@ UI の状態設計に関する 8 つの UX 規則をチェックし適用する�
 - 「対象外」と「別の表現で満たす条件」を混ぜない。前者は状態が起きないか困らない場合、後者は別の手段で目的を達成できる場合である。
 - 規則の一覧表は `skills/ux-state-review/SKILL.md` と `README.md` の両方にある。片方を変えたらもう一方も揃える。
 - 規則を変更したら `skills/ux-state-review/evals/evals.json` に、その変更を検証できるテストプロンプトを追加する。
+
+## AI クロスレビュー
+
+実装を一区切りしたら、`docs/cross-review.md` の手順で相互レビューを行う。
+実行は `npm run review:codex`（Codex がレビュー）または `node tools/cross-review.js subagent`（CLI を使えない環境）を使う。
+レビュー観点はリポジトリ直下の `.cross-review.md` にある。
+`tools/`、`docs/cross-review.md`、`.cross-review.example.md`、`.claude/skills/cross-review/SKILL.md` は upstream からの同期対象であり、直接編集せず `npm run sync` で更新する。
