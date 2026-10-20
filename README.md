@@ -59,10 +59,10 @@ cp -r ux-state-review/skills/ux-state-review ~/.claude/skills/
 
 ```bash
 # Codex
-cp -r ux-state-review/skills/ux-state-review ~/.codex/skills/
+cp -r ux-state-review/skills/ux-state-review ~/.agents/skills/
 ```
 
-特定のプロジェクトだけで使う場合は、そのリポジトリの `.claude/skills/`（Claude Code）または `.codex/skills/`（Codex）にコピーします。
+特定のプロジェクトだけで使う場合は、そのリポジトリの `.claude/skills/`（Claude Code）または `.agents/skills/`（Codex）にコピーします。
 
 クローンしたリポジトリをそのまま参照したい場合は、コピーの代わりにシンボリックリンクを張っても動作します。
 
